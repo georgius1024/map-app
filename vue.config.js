@@ -1,4 +1,7 @@
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/map-app/'
+    : '/',
   chainWebpack: config => {
     config.module
       .rule('i18n')
